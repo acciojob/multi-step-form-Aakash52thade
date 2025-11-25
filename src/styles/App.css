@@ -1,1 +1,64 @@
+body {
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
 
+/* FORM CONTAINER */
+.form-container {
+  width: 350px;
+  margin: 50px auto;
+  background: #d7edf6;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* LABELS */
+.form-container label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* INPUT FIELDS */
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-container input:focus {
+  border-color: #7bb4d1;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  min-width: 100px;
+}
+
+/* Previous Button */
+button[type="button"]:first-of-type {
+  background: #b8f0c2;
+}
+
+/* Next & Submit Buttons */
+button[type="button"]:last-of-type,
+button[type="submit"] {
+  background: #9af4a7;
+}
+
+button:hover {
+  opacity: 0.9;
+}
