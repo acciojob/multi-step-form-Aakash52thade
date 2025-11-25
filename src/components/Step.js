@@ -12,6 +12,7 @@ const Step = ({
     if(currentStep === 1){
         return(
            <form className="form-container" onSubmit={(e) => e.preventDefault()}>
+             <h1>Personal Details</h1>
               <div>
                 <label>First Name</label>
                 <input 
@@ -42,6 +43,7 @@ const Step = ({
     if(currentStep === 2){
         return(
            <form className="form-container" onSubmit={(e) => e.preventDefault()}>
+              <h1>Car Details</h1>
              <div>
                 <label>Brand</label>
                 <input 
@@ -76,6 +78,7 @@ const Step = ({
               e.preventDefault();
               handleSubmit();
             }}>
+                <h1>Payment Details</h1>
               <div>
                 <label>Credit Card Number</label>
                 <input 
