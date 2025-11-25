@@ -3,16 +3,14 @@ import './../styles/App.css';
 import Step from './Step.js'
 
 const App = () => {
-
- const [fields, setFields] = useState({
-    firstName: "",
-    lastName: "",
-    make: "",
+  const [fields, setFields] = useState({
+    first_name: "",
+    last_name: "",
     model: "",
+    car_price: "",
     card_info: "",
     expiry_date: ""
-});
-
+  });
 
   const [currentStep, setCurrentStep] = useState(1);
 
@@ -29,16 +27,19 @@ const App = () => {
   };
 
   const handleInputChange = (name, value) => {
-    setFields(prev => ({ ...prev, [name]: value }));
+    setFields({
+      ...fields,
+      [name]: value
+    });
   };
 
   const handleSubmit = () => {
-    console.log("Form Submitted:", fields); // ONLY RUNS ON SUBMIT
+    console.log("Form Submitted:", fields);
   };
 
   return (
     <div>
-      <Step
+      <Step 
         fields={fields}
         handleInputChange={handleInputChange}
         handleSubmit={handleSubmit}
