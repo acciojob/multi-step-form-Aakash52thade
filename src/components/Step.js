@@ -17,9 +17,9 @@ const Step = ({
                 <input 
                   type='text'
                   id='first_name'
-                  name='first_name'
-                  value={fields.first_name}
-                  onChange={(e) => handleInputChange('first_name', e.target.value)}
+                  name='firstName'
+                  value={fields.firstName}
+                  onChange={(e) => handleInputChange('firstName', e.target.value)}
                 />
               </div>
 
@@ -28,9 +28,9 @@ const Step = ({
                 <input 
                   type='text'
                   id='last_name'
-                  name='last_name'
-                  value={fields.last_name}
-                  onChange={(e) => handleInputChange('last_name', e.target.value)}
+                  name='lastName'
+                  value={fields.lastName}
+                  onChange={(e) => handleInputChange('lastName', e.target.value)}
                 />
             </div>
 
@@ -43,6 +43,17 @@ const Step = ({
         return(
            <form className="form-container" onSubmit={(e) => e.preventDefault()}>
              <div>
+                <label>Brand</label>
+                <input 
+                  type='text'
+                  id='make'
+                  name='make'
+                  value={fields.make}
+                  onChange={(e) => handleInputChange('make', e.target.value)}
+                />
+              </div>
+
+              <div>
                 <label>Model</label>
                 <input 
                   type='text'
@@ -50,17 +61,6 @@ const Step = ({
                   name='model'
                   value={fields.model}
                   onChange={(e) => handleInputChange('model', e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label>Car Price</label>
-                <input 
-                  type='text'
-                  id='car_price'
-                  name='car_price'
-                  value={fields.car_price}
-                  onChange={(e) => handleInputChange('car_price', e.target.value)}
                 />
               </div>
 
