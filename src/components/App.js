@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './../styles/App.css';
-import Step from './Step.js'
+import Step from './Step.js';
 
 const App = () => {
   const [fields, setFields] = useState({
@@ -35,18 +35,39 @@ const App = () => {
 
   const handleSubmit = () => {
     console.log("Form Submitted:", fields);
+    // Add form submission logic here
   };
 
   return (
     <div>
-      <Step 
-        fields={fields}
-        handleInputChange={handleInputChange}
-        handleSubmit={handleSubmit}
-        handlePrevious={handlePrevious}
-        currentStep={currentStep}
-        handleNext={handleNext}
-      />
+      {/* Render current step based on currentStep state */}
+      {currentStep === 1 && (
+        <Step 
+          stepNumber={1}
+          fields={fields}
+          handleInputChange={handleInputChange}
+          handleNext={handleNext}
+          handlePrevious={handlePrevious}
+        />
+      )}
+      {currentStep === 2 && (
+        <Step 
+          stepNumber={2}
+          fields={fields}
+          handleInputChange={handleInputChange}
+          handleNext={handleNext}
+          handlePrevious={handlePrevious}
+        />
+      )}
+      {currentStep === 3 && (
+        <Step 
+          stepNumber={3}
+          fields={fields}
+          handleInputChange={handleInputChange}
+          handleSubmit={handleSubmit}
+          handlePrevious={handlePrevious}
+        />
+      )}
     </div>
   );
 }
